@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    @@include('layouts/head.html', {
+        "title": "Главная страница"
+    })
+
+<body>
+
+    @@include('layouts/header.html', {
+        "page": "home"
+    })
+
+    <div class="home">
+        <div class="categories">
+            <div class="container">
+                <div class="categories__content">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="./img/icons/fire.svg" alt="">
+                                <p>Акции</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/icons/pizza.svg" alt="">
+                                <p>Пицца</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/icons/sushi.svg" alt="">
+                                <p>Суши</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/icons/drink.svg" alt="">
+                                <p>Напитки</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/icons/s'nacks.svg" alt="">
+                                <p>Закуски</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/icons/combo.svg" alt="">
+                                <p>Комбо</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/icons/dessert.svg" alt="">
+                                <p>Десерты</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./img/icons/sauce.svg" alt="">
+                                <p>Соусы</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="banners">
+            <div class="container">
+                <div class="banners__content">
+                    <div class="banner">
+                        <img src="./img/banners/banner_pizza_top.png" alt="">
+                        <p>3 средние пиццы от 999 рублей</p>
+                    </div>
+                    <div class="banner">
+                        <img src="./img/banners/banner_cashback_top.png" alt="">
+                        <p>Кэшбек 10% на самовывоз (доставка)</p>
+                    </div>
+                    <div class="banner">
+                        <img src="./img/banners/banner_pizza_top.png" alt="">
+                        <p>3 средние пиццы от 999 рублей</p>
+                    </div>
+                    <div class="banner">
+                        <img src="./img/banners/banner_cashback_top.png" alt="">
+                        <p>Кэшбек 10% на самовывоз (доставка)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="address__check">
+            <div class="container">
+                <div class="address__check_content">
+                    <label for="">Проверить адрес доставки</label>
+                    <div class="location">
+                        <img src="./img/icons/location small.svg" alt="">
+                        <input type="text" name="" id="" placeholder="Адрес">
+                    </div>
+                    <button type="button">Проверить</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="container">
+                <div class="title">
+                    <h2>Пицца</h2>
+                    <button id="filter" class="filter" type="button" data-btn-filter="filter-pizza">
+                        <img src="./img/icons/filter.svg" alt="">
+                        <p>Фильтры</p>
+                    </button>
+                </div>
+                <div class="products__content">
+                    <div class="product">
+                        <div class="label">NEW</div>
+                        <img src="./img/products/pizza1.png" alt="">
+                        <div class="product__name">
+                            <p>Чикен Сладкий Чили</p>
+                            <span>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</span>
+                        </div>
+                        <div class="product__price">
+                            <button id="btn-add-cart" type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="label">ХИТ</div>
+                        <img src="./img/products/pizza1.png" alt="">
+                        <div class="product__name">
+                            <p>EASY PEASY огуречный расколбас</p>
+                            <span>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/pizza1.png" alt="">
+                        <div class="product__name">
+                            <p>EASY PEASY чикен а-ля хрен</p>
+                            <span>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/pizza1.png" alt="">
+                        <div class="product__name">
+                            <p>4 сезона</p>
+                            <span>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/pizza1.png" alt="">
+                        <div class="product__name">
+                            <p>Чикен Сладкий Чили</p>
+                            <span>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/pizza1.png" alt="">
+                        <div class="product__name">
+                            <p>EASY PEASY огуречный расколбас</p>
+                            <span>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/pizza1.png" alt="">
+                        <div class="product__name">
+                            <p>EASY PEASY чикен а-ля хрен</p>
+                            <span>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/pizza1.png" alt="">
+                        <div class="product__name">
+                            <p>4 сезона</p>
+                            <span>Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="container">
+                <div class="title">
+                    <h2>Суши</h2>
+                    <button class="filter" type="button" data-btn-filter="filter-sushi">
+                        <img src="./img/icons/filter.svg" alt="">
+                        <p>Фильтры</p>
+                    </button>
+                </div>
+                <div class="products__content">
+                    <div class="product">
+                        <div class="label">NEW</div>
+                        <img src="./img/products/sushi.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="label">ХИТ</div>
+                        <img src="./img/products/sushi2.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sushi4.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sushi3.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sushi.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sushi2.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sushi4.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sushi3.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="container">
+                <div class="title">
+                    <h2>Закуски</h2>
+                    <button class="filter" type="button" data-btn-filter="filter-snacks">
+                        <img src="./img/icons/filter.svg" alt="">
+                        <p>Фильтры</p>
+                    </button>
+                </div>
+                <div class="products__content">
+                    <div class="product">
+                        <div class="label">NEW</div>
+                        <img src="./img/products/snaks1.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="label">ХИТ</div>
+                        <img src="./img/products/snaks2.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/snaks3.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/snaks4.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/snaks3.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/snaks4.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/snaks5.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/snaks5.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="container">
+                <div class="title">
+                    <h2>Десерты</h2>
+                    <button class="filter" type="button" data-btn-filter="filter-desserts">
+                        <img src="./img/icons/filter.svg" alt="">
+                        <p>Фильтры</p>
+                    </button>
+                </div>
+                <div class="products__content">
+                    <div class="product">
+                        <div class="label">NEW</div>
+                        <img src="./img/products/desert1.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="label">ХИТ</div>
+                        <img src="./img/products/desert2.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/desert3.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/desert14png.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/desert1.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/desert14png.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/desert2.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/desert3.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="container">
+                <div class="title">
+                    <h2>Напитки</h2>
+                    <button class="filter" type="button" data-btn-filter="filter-drinks">
+                        <img src="./img/icons/filter.svg" alt="">
+                        <p>Фильтры</p>
+                    </button>
+                </div>
+                <div class="products__content">
+                    <div class="product">
+                        <div class="label">NEW</div>
+                        <img src="./img/products/drinks5.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="label">ХИТ</div>
+                        <img src="./img/products/drinks.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/drinks2.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/drinks3.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/drinks4.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/drinks2.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/drinks3.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/drinks.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="container">
+                <div class="title">
+                    <h2>Соусы</h2>
+                    <button class="filter" type="button" data-btn-filter="filter-souces">
+                        <img src="./img/icons/filter.svg" alt="">
+                        <p>Фильтры</p>
+                    </button>
+                </div>
+                <div class="products__content">
+                    <div class="product">
+                        <div class="label">NEW</div>
+                        <img src="./img/products/sauce.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="label">ХИТ</div>
+                        <img src="./img/products/sauce2.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sauce3.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sauce4.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sauce3.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sauce2.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sauce4.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/sauce.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="container">
+                <div class="title">
+                    <h2>Комбо</h2>
+                    <button class="filter" type="button" data-btn-filter="filter-combo">
+                        <img src="./img/icons/filter.svg" alt="">
+                        <p>Фильтры</p>
+                    </button>
+                </div>
+                <div class="products__content">
+                    <div class="product">
+                        <div class="label">NEW</div>
+                        <img src="./img/products/combo1.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="label">ХИТ</div>
+                        <img src="./img/products/combo2.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/combo3.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/combo4.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/combo3.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия кранч</p>
+                            <span>Семга, рис, сыр креметто, соус унаги, креветка, авокадо, чип...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/combo4.png" alt="">
+                        <div class="product__name">
+                            <p>Филадельфия крем-брюле</p>
+                            <span>Сливочный сыр, семга татаки с тростниковым сахаром, соус у...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/combo1.png" alt="">
+                        <div class="product__name">
+                            <p>Супер Филадельфия</p>
+                            <span>Действительно много семги, сливочный сыр, огурец, рис, н...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="./img/products/combo2.png" alt="">
+                        <div class="product__name">
+                            <p>Тигр мама</p>
+                            <span>Тигровая креветка, огурец, авокадо, соус Айоли, рис, ик...</span>
+                        </div>
+                        <div class="product__price">
+                            <button type="button">Выбрать</button>
+                            <p>от 399 ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="delivery__info">
+            <div class="container">
+                <div class="delivery__info_content">
+                    <h3>Доставка пиццы в Москве</h3>
+                    <div class="data_more_less">
+                        <div class="data_more_less_inner" data-height="300" data-increase-by="400">
+                            <div class="data_more_less_body">
+                                <p>Захотелось чего-то вкусного и сытного? Желание простое и понятное, только в холодильнике все не то, и до магазина
+                                    идти
+                                    лень. Все пропало? Нет. Недорого заказать пиццу в Москве очень просто! Вам на помощь спешит супергерой – Domino’s
+                                    Pizza!
+                                    Как у всякого супергероя, у Domino’s Pizza есть свои суперсилы: восхитительный вкус продукции из отборных
+                                    ингредиентов;
+                                    широкий ассортимент, включающий легендарные, фирменные и классические виды, для вегетарианцев и любителей
+                                    экспериментировать; быстрая и бесплатная доставка пиццы в течение 30 минут, чтобы вкусное и ароматное блюдо не
+                                    успевало
+                                    остыть.</p>
+                                <h4>Как сделать заказ</h4>
+                                <p>Доставка пиццы от Domino’s – это когда Вам не нужно никуда ехать или звонить, ведь есть Интернет. Никогда еще заказ
+                                    пиццы на дом в Москве не был таким простым! Чтобы заказать пиццу онлайн, Вам необходимо: выбрать понравившийся
+                                    вариант и
+                                    количество порций; положить желаемое в «Корзину»; не уходить далеко, так как вкусная пицца на заказ с доставкой уже
+                                    мчится к Вам из ближайшей пиццерии Domino’s. И не забудьте оплатить заказ курьеру!</p>
+                            </div>
+                        </div>
+                        <a class="action_more more_less_action btn">Показать полностью</a>
+                        <a class="action_less more_less_action btn">Скрыть</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    @@include('layouts/footer.html', {})
+
+    @@include('components/popups.html', {})
+
+    <script src="js/app.min.js"></script>
+</body>
+</html>

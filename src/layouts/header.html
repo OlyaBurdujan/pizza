@@ -1,0 +1,67 @@
+<header class="header__top  @@if (context.page === 'home') {header__home}">
+    <div class="container">
+        <div class="header__list">
+            <ul class="left__content">
+                <li>
+                    <img src="./img/icons/location.svg" alt="">
+                    <select name="city" id="city">
+                        <option value="Москва">Москва</option>
+                        <option value="Питер">Питер</option>
+                        <option value="Сочи">Сочи</option>
+                    </select>
+                </li>
+                <li><a href="">Проверить адрес</a></li>
+                <li>
+                    <p>Среднее время доставки*:</p>
+                    <span> 00:24:19</span>
+                </li>
+            </ul>
+            <ul class="right__content">
+                <li>
+                    <p>Время работы: с 11:00 до 23:00</p>
+                </li>
+                <li>
+                    <a href=""><img src="./img/icons/account.svg" alt=""></a>
+                    <p><a class="autorization" href="javascript:void(0);">Войти в аккаунт</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar__menu @@if (context.page === 'home') {navbar__home}">
+    <div class="container">
+        <div class="navbar__content">
+            <div class="logo__info">
+                <a href="index.html"><img src="./img/icons/pizza icon.svg" alt=""></a> 
+                <a href="index.html"><p>Куда пицца</p></a> 
+            </div>
+            <ul class="menu__items">
+                <li class="menu__item"><a>Акции</a></li>
+                <li class="menu__item"><a href="#pizza">Пицца</a></li>
+                <li class="menu__item"><a href="#sushi">Суши</a></li>
+                <li class="menu__item"><a href="#drinks">Напитки</a></li>
+                <li class="menu__item"><a href="#snaks">Закуски</a></li>
+                <li class="menu__item"><a href="#combo">Комбо</a></li>
+                <li class="menu__item"><a href="#desert">Десерты</a></li>
+                <li class="menu__item"><a href="#souces">Соусы</a></li>
+                <li class="menu__item">
+                    <a id="dropdown-menu" class="other">Другое <img src="./img/icons/arrow down.svg" alt=""></a>
+                    <ul class="dropdown__items">
+                        <li class="dropdown__item"><a href="">Акции</a></li>
+                        <li class="dropdown__item"><a href="">Пользовательское соглашение</a></li>
+                        <li class="dropdown__item"><a href="">Условия гарантии</a></li>
+                        <li class="dropdown__item"><a href="">Ресторан</a></li>
+                        <li class="dropdown__item"><a href="">Контакты</a></li>
+                        <li class="dropdown__item"><a href="">Поддержка</a></li>
+                        <li class="dropdown__item"><a href="">Отследить заказ</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar__cart">
+                <img src="./img/icons/shopping bag.svg" alt="">
+                <p>0 ₽</p>
+            </div>
+        </div>
+    </div>
+</nav>

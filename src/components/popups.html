@@ -1,0 +1,229 @@
+<div class="popup__filter filter__active">
+        <div class="filter__content">
+            <div class="filter__active_title">
+                <h2>Фильтры</h2>
+                <button id="close-filter" class="cross" type="button">
+                    <img src="./img/icons/сross.svg" alt="">
+                </button>
+            </div>
+            <div class="sort__block">
+                <p>Общее</p>
+                <div class="sort__block_list">
+                    <button class="sort__btn active" type="button">Хит</button>
+                    <button class="sort__btn" type="button">Новинка</button>
+                    <button class="sort__btn" type="button">С мясом</button>
+                    <button class="sort__btn" type="button">Вегетарианская</button>
+                    <button class="sort__btn" type="button">С курицей</button>
+                    <button class="sort__btn" type="button">Без лука</button>
+                    <button class="sort__btn" type="button">С грибами</button>
+                    <button class="sort__btn" type="button">С морепродуктами</button>
+                    <button class="sort__btn" type="button">Барбекью</button>
+                </div>
+            </div>
+            <div class="sort__block">
+                <p>Сыр</p>
+                <div class="sort__block_list">
+                    <button class="sort__btn" type="button">Реджанито</button>
+                    <button class="sort__btn" type="button">Моцарелла</button>
+                    <button class="sort__btn" type="button">Чеддер</button>
+                    <button class="sort__btn" type="button">С голубой плесенью</button>
+                    <button class="sort__btn" type="button">Смесь итальянских сыров</button>
+                    <button class="sort__btn" type="button">Мягкий молодой сыр</button>
+                </div>
+            </div>
+            <div class="sort__block">
+                <p>Мясо</p>
+                <div class="sort__block_list">
+                    <button class="sort__btn " type="button">Пепперони</button>
+                    <button class="sort__btn " type="button">Свинина</button>
+                    <button class="sort__btn " type="button">Ветчина</button>
+                    <button class="sort__btn " type="button">Бекон</button>
+                    <button class="sort__btn " type="button">Говядина</button>
+                    <button class="sort__btn " type="button">Чоризо</button>
+                    <button class="sort__btn " type="button">Колбаски</button>
+                    <button class="sort__btn " type="button">Куриная грудка</button>
+                </div>
+            </div>
+            <div class="sort__block">
+                <p>Компонент</p>
+                <div class="sort__block_list">
+                    <button class="sort__btn" type="button">Креветка</button>
+                    <button class="sort__btn" type="button">Ананасы</button>
+                    <button class="sort__btn" type="button">Шампиньоны</button>
+                    <button class="sort__btn" type="button">Лук</button>
+                    <button class="sort__btn" type="button">Перец халапеньо</button>
+                    <button class="sort__btn" type="button">Орегано</button>
+                    <button class="sort__btn" type="button">Зеленый перец</button>
+                    <button class="sort__btn" type="button">Томаты</button>
+                    <button class="sort__btn" type="button">Чеснок</button>
+                    <button class="sort__btn" type="button">Красный перец</button>
+                    <button class="sort__btn" type="button">Оливки</button>
+                    <button class="sort__btn" type="button">Маслины</button>
+                    <button class="sort__btn" type="button">Клубника</button>
+                    <button class="sort__btn" type="button">Смесь итальянских трав</button>
+                </div>
+            </div>
+            <div class="filter__active_btns">
+                <button type="reset">Сбросить</button>
+                <button type="button">Применить</button>
+            </div>
+        </div>
+</div>
+
+<div class="overlay">
+    <div class="popup">
+        <button id="close-register" class="close"><img src="../img/icons/close.svg" alt=""></button>
+        <div class="popup__content">
+            <h4>Вход в аккаунт</h4>
+            <p>Сможете быстро оформлять заказы,
+                использовать бонусы</p>
+            <span>Номер телефона</span>
+            <input type="text" name="" id="" placeholder="+7">
+            <button class="login" type="submit">Войти</button>
+            <h5 class="last">Продолжая, вы соглашаетесь со сбором и обработкой персональных данных и пользовательским
+                соглашением</h5>
+        </div>
+    </div>
+</div>
+
+<div id="popup-add-cart" class="popup__cart">
+    <div class="popup__overlay">
+        <button id="close-add-cart" class="close"><img src="../img/icons/close.svg" alt=""></button>
+        <div class="popup__cart_content">
+            <div class="product__photo">
+                <img class="pizza" src="../img/products/pizza1.png" alt="">
+            </div>
+            <div class="popup__cart_info">
+                <div class="popup__title">
+                    <div class="popup__title_left">
+                        <img src="../img/icons/fire.svg" alt="">
+                        <h3>Пепперони по-деревенски</h3>
+                        <p>NEW</p>
+                    </div>
+                    <div class="popup__title_right">
+                        <img src="./img/icons/info.svg" alt="">
+                    </div>
+    
+                </div>
+                <div class="pizza__ingredients">
+                    <div class="pizza__ingredient">
+                        <label for="matarella">
+                            <input class="checkbox" id="matarella">
+                            <div class="ingredient__type">
+                                <img src="../img/icons/matarella.svg" alt="">
+                            </div>
+                            <div class="pizza__ingredient_name">Моцарелла</div>
+                        </label>
+                    </div>
+                    <div class="pizza__ingredient absent">
+                        <label for="">
+                            <input class="checkbox" id="">
+                            <div class="ingredient__type">
+                                <img src="./img/icons/cucumber.svg" alt="">
+                            </div>
+                            <div class="pizza__ingredient_name">Огурцы маринованные</div>
+                        </label>
+                    </div>
+                    <div class="pizza__ingredient">
+                        <label for="">
+                            <input class="checkbox" id="">
+                            <div class="ingredient__type">
+                                <img src="./img/icons/piperoni.svg" alt="">
+                            </div>
+                            <div class="pizza__ingredient_name">Пепперони</div>
+                        </label>
+                    </div>
+                    <div class="pizza__ingredient">
+                        <label for="">
+                            <input class="checkbox" id="">
+                            <div class="ingredient__type">
+                                <img src="./img/icons/tomate_souce.svg" alt="">
+                            </div>
+                            <div class="pizza__ingredient_name">Томатный соус</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="pizza__types">
+                    <label class="pizza__type" for="traditional">
+                        <input class="pizza__radio" id="traditional" type="radio" checked>
+                        <div class="pizza__type_name">
+                            Традиционное
+                        </div>
+                    </label>
+                    <label class="pizza__type" for="thin">
+                        <input class="pizza__radio" id="thin" type="radio">
+                        <div class="pizza__type_name">
+                            Тонкое
+                        </div>
+                    </label>
+                </div>
+                <div class="pizza__types pizza__size">
+                    <label class="pizza__type" for="small">
+                        <input class="pizza__size_radio" id="small" type="radio" checked>
+                        <div class="pizza__type_name">20 см</div>
+                    </label>
+                    <label class="pizza__type" for="middle">
+                        <input class="pizza__size_radio" id="middle" type="radio">
+                        <div class="pizza__type_name">28 см</div>
+                    </label>
+                    <label class="pizza__type" for="big">
+                        <input class="pizza__size_radio" id="big" type="radio">
+                        <div class="pizza__type_name">33 см</div>
+                    </label>
+                </div>
+                <div class="additional__products">
+                    <h3 class="additional__product_title">Добавьте в пиццу</h3>
+                    <div class="additional__products_type">
+                        <div class="additional__product">
+                            <label for="pr-matarella">
+                                <input class="checkbox" id="pr-matarella" type="checkbox">
+                                <div class="additional__product_type active__product">
+                                    <img src="../img/icons/matarella.svg" alt="">
+                                </div>
+                                <div class="additional__product_name"> Моцарелла</div>
+                                <div class="additional__product_price">59 ₽</div>
+                            </label>
+                        </div>
+                        <div class="additional__product">
+                            <label for="pr-сhampignon">
+                                <input class="checkbox" id="pr-сhampignon" type="checkbox">
+                                <div class="additional__product_type">
+                                    <img src="../img/icons/сhampignon.svg" alt="">
+                                </div>
+                                <div class="additional__product_name">Шампиньоны</div>
+                                <div class="additional__product_price">59 ₽</div>
+                            </label>
+                        </div>
+                        <div class="additional__product">
+                            <label for="pr-onion">
+                                <input class="checkbox" id="pr-onion" type="checkbox">
+                                <div class="additional__product_type">
+                                    <img src="../img/icons/onion.svg" alt="">
+                                </div>
+                                <div class="additional__product_name">Красный лук</div>
+                                <div class="additional__product_price">59 ₽</div>
+                            </label>
+                        </div>
+                        <div class="additional__product">
+                            <label for="pr-bell-peper">
+                                <input class="checkbox" id="pr-bell-peper" type="checkbox">
+                                <div class="additional__product_type">
+                                    <img src="../img/icons/bell-pepper.svg" alt="">
+                                </div>
+                                <div class="additional__product_name">Сладкий перец</div>
+                                <div class="additional__product_price">59 ₽</div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="add__selected">
+                    <div class="total__summ">
+                        <p>Итого: 379 ₽</p>
+                        <span>400 г</span>
+                    </div>
+                    <button class="add__selected_products" type="button">Добавить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
