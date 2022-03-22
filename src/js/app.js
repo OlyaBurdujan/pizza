@@ -93,8 +93,18 @@ setListener(btnDropdown, 'click', function() {
   itemsDropdown.classList.toggle('active');
 }, false);
 
-// открываем фильтр
+//удаляем ингридиент 
+  $('.cross__img').on("click", function(e) {
+    e.preventDefault();
+    const btnIngredient = $(this).attr('data-cross-ingredient');
+    $(".pizza__ingredient").each(function(){
+      if($(this).attr('data-attr-ingredient') == btnIngredient) {
+        $(this).toggleClass("deleted");
+      }
+    });
+  });
 
+// открываем фильтр
 const btnsFilter = document.querySelectorAll('button[data-btn-filter]');
 const filterItems = document.querySelector('.filter__active'),
   animationItems = document.querySelector('.filter__content'),
@@ -164,4 +174,45 @@ $('#close-add-cart').on('click', function() {
 	$('#popup-add-cart').fadeOut();
 });
 
-// При нажатии на добавить доп.продукт, меняется рамка
+
+// Открываем корзину 
+const btnsCart = document.querySelectorAll('.navbar__cart');
+const cartItems = document.querySelector('.active__cart'),
+  animationItemsCart = document.querySelector('.cart__content'),
+  closeCart = document.getElementById('close-cart');
+
+  [...btnsCart].forEach(btn => {
+    setListener(btn, 'click', () => {
+      document.body.classList.add('popup-open');
+      cartItems.style.display = 'flex';
+      //тут он добавляет анимацию выход из право в лево, тем самым показывая попап
+      animationItemsCart.style.cssText = 'animation:slide-filter-in .3s ease; animation-fill-mode: forwards;';
+    });
+  });
+
+   setListener(closeCart, 'click', function() {
+    document.body.classList.remove('popup-open');
+    cartItems.style.display = 'none';
+    //тут он добавляет анимацию от лево в право, тем самым скрывая попап
+    animationItemsCart.style.cssText = 'animation:slide-filter-out .3s ease; animation-fill-mode: forwards;';
+    //style.cssText - отвечает за добавление style в коде.. тоже самое как с классом, но в данном случае это будет 'style'
+    //style="animation: 0.3s ease 0s 1 normal forwards running slide-filter-out;"
+  }, false);
+
+// увеличиваем кол-во товаров в корзине
+
+window.addEventListener('click', function (event) {
+  if(event.target.dataset.action === 'plus') {
+    const number = event.target.closest('.number__produc');
+    const counter = number.querySelector('.count');
+    counter.innerText = ++counter.innerText;
+  }
+
+  if(event.target.dataset.action === 'minus') {
+    const number = event.target.closest('.number__produc');
+    const counter = number.querySelector('[.count');
+    if(parseInt(counter.innerText) > 1 ) {
+      counter.innerText = --counter.innerText;
+    }
+  }
+});

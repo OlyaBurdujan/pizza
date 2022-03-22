@@ -6,7 +6,7 @@
     left: 0;
     display: none;
     background: rgba(25, 25, 25, 0.4);
-    backdrop-filter: blur(32px);
+    backdrop-filter: blur(6px);
     z-index: 1034;
     .popup {
         position: absolute;
@@ -129,7 +129,7 @@
     left: 0;
     display: none;
     background: rgba(25, 25, 25, 0.4);
-    backdrop-filter: blur(32px);
+    backdrop-filter: blur(6px);
     z-index: 1034;
     .close {
         position: absolute;
@@ -211,53 +211,66 @@
             display: flex;
             flex-direction: row;
             margin-bottom: 24px;
-            .pizza__ingredient {     
+            .pizza__ingredient { 
                 position: relative; 
                 margin-right: 20px;
+                &.deleted {
+                    svg {
+                        path {
+                            fill: #A5A5A5;
+                        }
+                    }
+                    .pizza__ingredient_name {
+                        color: #A5A5A5;
+                    }
+                }
                 &:last-child {
                     margin-right: 0;
                 }
-            input {
-                display: none;
-                outline: none;
-                border: none;
-                background: none;
-                padding: 0;
-                margin: 0;
-                -webkit-appearance: none;
+                input {
+                    display: none;
+                    outline: none;
+                    border: none;
+                    background: none;
+                    padding: 0;
+                    margin: 0;
+                    -webkit-appearance: none;
+                }
+                .ingredient__type {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #FFFFFF;
+                    border: 1px solid #F0F0F0;
+                    border-radius: 12px;
+                    height: 105px;
+                    width: 105px;
+                    cursor: pointer;
+                    margin-bottom: 8px;
+                    .cross__img {
+                        display: none;
+                        position: absolute;
+                        top: 8px;
+                        right: 8px;
+                    }
+                    &:focus,
+                    &:hover {
+                        .cross__img {
+                            display: block;
+                        }
+                    }
+                }
+                .pizza__ingredient_name {
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 18px;
+                }
             }
-            .ingredient__type {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #FFFFFF;
-                border: 1px solid #F0F0F0;
-                border-radius: 12px;
-                height: 105px;
-                width: 105px;
-                cursor: pointer;
-                margin-bottom: 8px;
-            }
-            .pizza__ingredient_name {
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 18px;
-            }
-        }
-        .absent {
-            p {
-                color: #A5A5A5;
-            }
-        }
-        .absent__photo {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-        }
         }
         .pizza__types {
             display: flex;
@@ -430,6 +443,175 @@
                 font-family: rubik;
                 color: #FFFFFF;
             }
+        }
+    }
+}
+
+.open__cart {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(25, 25, 25, 0.4);
+    backdrop-filter: blur(6px);
+    z-index: 1034;
+    .cart__content {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        max-width: 420px;
+        overflow-y: auto;
+        background-color: #FFFFFF;
+        -webkit-transform: translateX(100%) translateY(0) translateZ(0);
+        transform: translateX(100%) translateY(0) translateZ(0);
+        -webkit-overflow-scrolling: touch;
+        will-change: transform;
+        transition: opacity .28s ease-out;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .cart__main {
+        padding: 32px 20px 12px;
+    }
+    &_title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 20px;
+        img {
+            cursor: pointer;
+        }
+    }
+    .cart__add_products {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .cart__add_product {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: #FFFFFF;
+        border: 1px solid #F0F0F0;
+        box-sizing: border-box;
+        border-radius: 12px;
+        width: 380px;
+        height: 126px;
+        padding: 16px;
+        margin-bottom: 20px;
+    }
+    .add__product_img {
+        margin-right: 16px;
+    }
+    .add__product_info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 238px;
+        width: 100%;
+        h5 {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 8px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            margin-bottom: 12px;
+        }
+
+    }
+    .count__product {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+        width: 100%;
+        .number__product {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px;
+            background: #FFEEE2;
+            border-radius: 6px;
+            max-width: 92px;
+            width: 100%;
+            color: #FF7010;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .summ {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            text-align: right;
+            color: #FF7010;
+        }
+        
+    }
+    .total__summ {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #F0F0F0;
+        padding: 12px 20px;
+        margin-top: auto;
+        .summ {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: #FF7010;
+        }
+        .checkout {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 13px 24px;
+            background: #FF7010;
+            border-radius: 6px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            font-family: rubik;
+            color: #FFFFFF;
+
+        }
+    }
+
+    @keyframes slide-filter-in {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slide-filter-out {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(100%);
         }
     }
 }
